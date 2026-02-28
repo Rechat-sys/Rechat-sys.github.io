@@ -1,74 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Secret Message</title>
-  <style>
-  body {
-    font-family: 'Verdana', sans-serif;
-    text-align: center;
-    color: #fff;
-    padding-top: 100px;
-    margin: 0;
-    height: 100vh;
-    background: linear-gradient(-45deg, #ff4b1f, #ff9068, #66a6ff, #89f7fe);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-  }
-
-  @keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
-
-  input {
-    padding: 10px;
-    width: 250px;
-    border-radius: 8px;
-    border: none;
-    margin-top: 20px;
-    font-size: 16px;
-  }
-  button {
-    padding: 10px 25px;
-    margin-top: 10px;
-    border-radius: 8px;
-    border: none;
-    background-color: #ff4b1f;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  button:hover { background-color: #ff9068; }
-  #result {
-    margin-top: 25px;
-    font-weight: bold;
-    font-size: 18px;
-  }
-  h1 { font-size: 40px; text-shadow: 2px 2px #00000050; }
-</style>
+  <title>Secret Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>🔐 Secret Login</h1>
 
-  <h1>🔐 Secret Message</h1>
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <button onclick="signup()">Sign Up</button>
+  <p id="msg"></p>
 
-  <input type="password" id="password" placeholder="Enter Secret Code">
-  <br>
-  <button onclick="checkPassword()">Open Message</button>
-
-  <p id="result"></p>
-
-  <script>
-    function checkPassword() {
-      var pass = document.getElementById("password").value;
-      if(pass === "1234") {
-        document.getElementById("result").innerHTML = "🎉 This is your secret message!";
-      } else {
-        document.getElementById("result").innerHTML = "❌ Wrong code!";
-      }
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
