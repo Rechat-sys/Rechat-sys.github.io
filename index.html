@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secret Message</title>
+</head>
+<body>
+  <h1>Secret Message 🔐</h1>
+  <input type="password" id="pass">
+  <button onclick="check()">Open</button>
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      var p = document.getElementById("pass").value;
+      if(p === "1234") {
+        document.getElementById("result").innerHTML = "This is secret!";
+      } else {
+        document.getElementById("result").innerHTML = "Wrong code!";
+      }
+    }
+  </script>
+</body>
+</html>
